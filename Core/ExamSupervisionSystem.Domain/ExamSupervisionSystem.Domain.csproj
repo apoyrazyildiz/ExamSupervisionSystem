@@ -9,7 +9,7 @@
     <ItemGroup>
       <Folder Include="Enums\" />
       <Folder Include="Parameters\" />
-      <Folder Include="Rule\" />
+      <Folder Include="Rules\" />
     </ItemGroup>
 
 </Project>
