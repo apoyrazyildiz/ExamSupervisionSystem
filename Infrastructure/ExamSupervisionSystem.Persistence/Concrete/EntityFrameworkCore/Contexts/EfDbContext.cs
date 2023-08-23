@@ -13,7 +13,9 @@ public  class EfDbContext : DbContext
     {
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(EfDbContext).Assembly);
     }
-    
+
+    //public virtual DbSet<User> Users { get; set; }
+
     public override int SaveChanges()
     {
         SaveBefore();
