@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Folder Include="Containers\" />
+      <Folder Include="Dtos\" />
+      <Folder Include="Features\Commands\" />
+      <Folder Include="Features\Queries\" />
+      <Folder Include="Interfaces\Repositories\" />
+      <Folder Include="Interfaces\Services\" />
+      <Folder Include="Mappings\AutoMapper\" />
+      <Folder Include="Parameters\" />
+      <Folder Include="Seeders\" />
+      <Folder Include="Services\" />
+      <Folder Include="Validations\FluentValidation\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ExamSupervisionSystem.Domain\ExamSupervisionSystem.Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+      <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+      <PackageReference Include="MediatR" Version="12.1.1" />
+    </ItemGroup>
+
+</Project>
