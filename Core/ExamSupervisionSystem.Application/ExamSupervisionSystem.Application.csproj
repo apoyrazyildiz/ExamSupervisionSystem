@@ -9,10 +9,7 @@
     <ItemGroup>
       <Folder Include="Containers\" />
       <Folder Include="Dtos\" />
-      <Folder Include="Features\Commands\" />
       <Folder Include="Features\Queries\" />
-      <Folder Include="Interfaces\Repositories\" />
-      <Folder Include="Interfaces\Services\" />
       <Folder Include="Mappings\AutoMapper\" />
       <Folder Include="Parameters\" />
       <Folder Include="Seeders\" />
