@@ -1,6 +1,6 @@
 ﻿using ExamSupervisionSystem.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
-using CourseSwapModel.Models;
+using ExamSupervisionSystem.WebApp.Models.CourseSwapModel.Models;
 
 namespace Controllers
 {

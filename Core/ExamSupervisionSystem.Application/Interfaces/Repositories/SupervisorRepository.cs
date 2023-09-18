@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ExamSupervisionSystem.Application.Interfaces.Repositories
 {
     internal class SupervisorRepository: ISupervisorRepository

@@ -1,7 +1,6 @@
 ﻿namespace ExamSupervisionSystem.Application.Interfaces.Repositories
 {
-    internal interface ICourseRepository
+    public class ApplicationDbContext
     {
-        IEnumerable<Course> GetAllCourses();
     }
 }

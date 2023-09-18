@@ -41,7 +41,7 @@ namespace ExamSupervisionSystem.WebApp.Controllers
                 // Ders ve gözetmen atamasını gerçekleştir
                 var success = _courseService.AssignSupervisor(model.CourseID, model.SupervisorID);
 
-                if (success)
+                if ((bool)success)
                 {
                     ViewBag.SuccessMessage = "Gözetmen ataması başarıyla tamamlandı!";
                 }
@@ -56,5 +56,5 @@ namespace ExamSupervisionSystem.WebApp.Controllers
         }
     }
 }
-    }
-}
+    
+

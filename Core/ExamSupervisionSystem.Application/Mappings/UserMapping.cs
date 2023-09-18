@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using ExamSupervisionSystem.Application.Interfaces.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,12 +7,14 @@ using System.Threading.Tasks;
 
 namespace ExamSupervisionSystem.Application.Mappings
 {
-    internal class ExamMapping : Profile
+    internal class UserMapping : Profile
     {
-        public ExamMapping()
+        public UserMapping()
         {
-            CreateMap<Exam, ExamDto>();
+            CreateMap<User, UserDto>(); 
 
+            
         }
+
     }
 }

@@ -20,3 +20,63 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+
+.header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+#sidebar {
+    width: 250px;
+    float: left;
+    background-color: #333;
+    color: #fff;
+}
+
+
+
+@media (max-width: 768px) {
+   
+    #sidebar {
+        display: none;
+    }
+}
+
+<!DOCTYPE html >
+<html >
+<head >
+<link rel="stylesheet" type="text/css" href="css/style.css" >
+</head >
+<body >
+<h1 class="header" > Baþlýk</h1 >
+<p > Merhaba dünya!</p >
+<a href="#" class="button" > Düðme</a >
+<div id="sidebar" > Yan menü</div >
+</body >
+</html >
