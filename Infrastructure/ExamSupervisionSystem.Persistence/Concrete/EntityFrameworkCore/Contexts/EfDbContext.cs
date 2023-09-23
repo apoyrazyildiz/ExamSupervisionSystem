@@ -1,4 +1,5 @@
 ﻿using ExamSupervisionSystem.Domain.Abstracts;
+using ExamSupervisionSystem.Domain.Entities;
 using ExamSupervisionSystem.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
@@ -14,7 +15,7 @@ public  class EfDbContext : DbContext
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(EfDbContext).Assembly);
     }
 
-    //public virtual DbSet<User> Users { get; set; }
+    public virtual DbSet<Exam> Exams { get; set; }
 
     public override int SaveChanges()
     {

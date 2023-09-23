@@ -8,5 +8,8 @@ namespace ExamSupervisionSystem.Application.Features.Commands
 {
     internal class AssignSupervisorCommand
     {
+        public int ExamId { get; set; } 
+        public int SupervisorId { get; set; } 
+        public bool IsSuccessful { get; set; }
     }
 }

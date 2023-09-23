@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExamSupervisionSystem.Domain.Entities
 {
-    internal class Exam
+    public class Exam
     {
         public int Id { get; set; }
         public string Name { get; set; }

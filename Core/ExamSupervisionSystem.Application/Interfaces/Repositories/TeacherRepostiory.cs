@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using ExamSupervisionSystem.Application.Entities;
+using ExamSupervisionSystem.Application.Dtos;
+using ExamSupervisionSystem.Domain.Entities;
 
 namespace ExamSupervisionSystem.Application.Interfaces.Repositories
 {
     internal class TeacherRepostiory : ITeacherRepository
     {
         private readonly ApplicationDbContext _context;
+
+        public object EntityState { get; private set; }
 
         public TeacherRepostiory(ApplicationDbContext context)
         {
@@ -49,5 +52,48 @@ namespace ExamSupervisionSystem.Application.Interfaces.Repositories
         {
             _context.SaveChanges();
         }
+
+        public async Task<TeacherDto> GetTeacherByIdAsync(int teacherId)
+        {
+            var teacher = await _context.Teachers.SingleOrDefaultAsync(t => t.TeacherId == teacherId);
+
+            
+
+            if (teacher == null)
+            {
+                return null;
+            }
+
+            
+            var teacherDto = new TeacherDto
+            {
+                TeacherId = teacher.TeacherId,
+                FirstName = teacher.FirstName,
+                LastName = teacher.LastName,
+               
+            };
+
+            return teacherDto;
+        }
+
+
+
+        public async Task<IEnumerable<TeacherDto>> GetAllTeachersAsync()
+        {
+        var teachers = await _context.Teachers.ToListAsync();
+
+        
+        var teacherDtos = teachers.Select(teacher => new TeacherDto
+        {
+            TeacherId = teacher.TeacherId,
+            FirstName = teacher.FirstName,
+            LastName = teacher.LastName,
+            
+        });
+
+        return teacherDtos;
     }
+}
+
+       
 }

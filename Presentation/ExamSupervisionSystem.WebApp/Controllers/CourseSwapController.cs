@@ -1,14 +1,23 @@
-﻿using ExamSupervisionSystem.WebApp.Models;
+﻿using ExamSupervisionSystem.Application.Features.Queries.GetExamDetails;
+using ExamSupervisionSystem.WebApp.Models;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using ExamSupervisionSystem.WebApp.Models.CourseSwapModel.Models;
 
 namespace Controllers
 {
     public class CourseSwapController : Controller
     {
+        private readonly IMediator mediator;
+
+        public CourseSwapController(
+            IMediator mediator)
+        {
+            this.mediator = mediator;
+        }
         [HttpGet]
         public IActionResult Index()
         {
+            //var response = mediator.Send(new GetExamDetailsQuery());
             // Ders takası için gerekli bilgileri kullanıcıya gösteren bir form sayfası
             return View();
         }

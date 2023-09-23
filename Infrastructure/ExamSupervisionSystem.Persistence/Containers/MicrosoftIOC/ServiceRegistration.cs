@@ -12,7 +12,8 @@ public static class ServiceRegistration
      var connectionString = configuration.GetConnectionString("DefaultConnection");   
         services.AddDbContext<EfDbContext>(opt =>
             opt.UseSqlServer(connectionString, sqlOpt => 
-            sqlOpt.MigrationsAssembly(migrationName).UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery))
+            sqlOpt.MigrationsAssembly(migrationName)
+            .UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery))
         );
         return services;
     }

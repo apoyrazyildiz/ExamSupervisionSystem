@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper.Internal;
-
+using ExamSupervisionSystem.Domain.Entities;
 
 namespace ExamSupervisionSystem.Application.Interfaces.Repositories
 {
@@ -12,27 +12,29 @@ namespace ExamSupervisionSystem.Application.Interfaces.Repositories
     {
         private readonly ApplicationDbContext _context;
 
+        public object EntityState { get; private set; }
+
         public SwapRequestRepository(ApplicationDbContext context)
         {
             _context = context;
         }
 
-        public IEnumerable<SwapRequest> GetAllSwapRequests()
+        public IEnumerable<SwapRequests> GetAllSwapRequests()
         {
             return _context.SwapRequests.ToList();
         }
 
-        public SwapRequest GetSwapRequestById(int id)
+        public SwapRequests GetSwapRequestById(int id)
         {
             return _context.SwapRequests.FirstOrDefault(request => request.Id == id);
         }
 
-        public void AddSwapRequest(SwapRequest request)
+        public void AddSwapRequest(SwapRequests request)
         {
             _context.SwapRequests.Add(request);
         }
 
-        public void UpdateSwapRequest(SwapRequest request)
+        public void UpdateSwapRequest(SwapRequests request)
         {
             _context.Entry(request).State = EntityState.Modified;
         }

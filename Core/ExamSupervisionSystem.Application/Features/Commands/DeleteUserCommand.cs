@@ -8,5 +8,9 @@ namespace ExamSupervisionSystem.Application.Features.Commands
 {
     internal class DeleteUserCommand
     {
+        public int UserId { get; set; }
+
+        
+        public bool IsSuccessful { get; set; }
     }
 }

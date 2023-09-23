@@ -1,4 +1,6 @@
-﻿using ExamSupervisionSystem.Application.Interfaces.Repositories;
+﻿using ExamSupervisionSystem.Application.Dtos;
+using ExamSupervisionSystem.Application.Interfaces.Repositories;
+using ExamSupervisionSystem.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,6 +49,31 @@ namespace ExamSupervisionSystem.Application.Interfaces.Services
             // Bir gözetmeni sil
             _supervisorRepository.DeleteSupervisor(id);
             _supervisorRepository.Save();
+        }
+
+        public Task<SupervisorDto> GetSupervisorByIdAsync(int supervisorId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<SupervisorDto>> GetAllSupervisorsAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<int> CreateSupervisorAsync(SupervisorDto supervisorDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateSupervisorAsync(int supervisorId, SupervisorDto supervisorDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> DeleteSupervisorAsync(int supervisorId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

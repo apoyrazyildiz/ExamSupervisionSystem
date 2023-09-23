@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ExamSupervisionSystem.Application.Interfaces.Services;
+using ExamSupervisionSystem.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +11,8 @@ namespace ExamSupervisionSystem.Application.Interfaces.Repositories
     internal class ExamRepository : IExamRepository
     {
         private readonly ApplicationDbContext _context;
+
+        public object EntityState { get; private set; }
 
         public ExamRepository(ApplicationDbContext context)
         {

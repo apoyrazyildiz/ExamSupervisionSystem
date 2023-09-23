@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExamSupervisionSystem.Domain.Entities
 {
-    internal class Admin
+    public class Admin
     {
         public int AdminId { get; set; }
         public string FirstName { get; set; }
@@ -15,6 +15,6 @@ namespace ExamSupervisionSystem.Domain.Entities
        
         public string AdminEmail { get; set; }
         public string AdminPassword { get; set; }
-
+        public string Email { get; set; }
     }
 }

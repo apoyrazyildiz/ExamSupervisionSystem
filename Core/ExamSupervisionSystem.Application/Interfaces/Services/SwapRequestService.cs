@@ -1,5 +1,6 @@
 ﻿using AutoMapper.Internal;
 using ExamSupervisionSystem.Application.Interfaces.Repositories;
+using ExamSupervisionSystem.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,23 +18,23 @@ namespace ExamSupervisionSystem.Application.Interfaces.Services
             _swapRequestRepository = swapRequestRepository;
         }
 
-        public IEnumerable<SwapRequest> GetAllSwapRequests()
+        public IEnumerable<SwapRequests> GetAllSwapRequests()
         {
             return _swapRequestRepository.GetAllSwapRequests();
         }
 
-        public SwapRequest GetSwapRequestById(int id)
+        public SwapRequests GetSwapRequestById(int id)
         {
             return _swapRequestRepository.GetSwapRequestById(id);
         }
 
-        public void CreateSwapRequest(SwapRequest request)
+        public void CreateSwapRequest(SwapRequests request)
         {
             _swapRequestRepository.AddSwapRequest(request);
             _swapRequestRepository.Save();
         }
 
-        public void UpdateSwapRequest(SwapRequest request)
+        public void UpdateSwapRequest(SwapRequests request)
         {
             _swapRequestRepository.UpdateSwapRequest(request);
             _swapRequestRepository.Save();

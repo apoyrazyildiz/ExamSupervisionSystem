@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ExamSupervisionSystem.Domain.Entities
 {
-    internal class SwapRequests
+    public class SwapRequests
     {
         public int Id { get; set; } 
         public int StudentId { get; set; } 

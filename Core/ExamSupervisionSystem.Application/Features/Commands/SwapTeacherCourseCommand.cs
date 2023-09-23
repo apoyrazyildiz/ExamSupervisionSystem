@@ -8,5 +8,9 @@ namespace ExamSupervisionSystem.Application.Features.Commands
 {
     internal class SwapTeacherCourseCommand
     {
+        public int FirstTeacherId { get; set; } 
+        public int SecondTeacherId { get; set; } 
+        public int CourseId { get; set; } 
+        public bool IsSuccessful { get; set; }
     }
 }

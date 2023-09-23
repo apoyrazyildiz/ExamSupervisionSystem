@@ -8,5 +8,11 @@ namespace ExamSupervisionSystem.Application.Features.Commands
 {
     internal class CreateUserCommand
     {
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public List<int> RoleIds { get; set; } 
+        public bool IsSuccessful { get; set; }
     }
 }

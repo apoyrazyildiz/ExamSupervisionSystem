@@ -8,13 +8,6 @@
 
     <ItemGroup>
       <Folder Include="Containers\" />
-      <Folder Include="Dtos\" />
-      <Folder Include="Features\Queries\" />
-      <Folder Include="Mappings\AutoMapper\" />
-      <Folder Include="Parameters\" />
-      <Folder Include="Seeders\" />
-      <Folder Include="Services\" />
-      <Folder Include="Validations\FluentValidation\" />
     </ItemGroup>
 
     <ItemGroup>
