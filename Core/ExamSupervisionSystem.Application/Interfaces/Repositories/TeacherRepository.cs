@@ -8,13 +8,13 @@ using ExamSupervisionSystem.Domain.Entities;
 
 namespace ExamSupervisionSystem.Application.Interfaces.Repositories
 {
-    internal class TeacherRepostiory : ITeacherRepository
+    internal class TeacherRepository : ITeacherRepository
     {
         private readonly ApplicationDbContext _context;
 
         public object EntityState { get; private set; }
 
-        public TeacherRepostiory(ApplicationDbContext context)
+        public TeacherRepository(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -93,7 +93,32 @@ namespace ExamSupervisionSystem.Application.Interfaces.Repositories
 
         return teacherDtos;
     }
-}
+
+        public Task<int> CreateTeacherAsync(TeacherDto teacherDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateTeacherAsync(int teacherId, TeacherDto teacherDto)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> DeleteTeacherAsync(int teacherId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteTeacherAsync(TeacherDto teacher)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task UpdateTeacherAsync(TeacherDto existingTeacher)
+        {
+            throw new NotImplementedException();
+        }
+    }
 
        
 }

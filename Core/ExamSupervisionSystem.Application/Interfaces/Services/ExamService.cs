@@ -1,4 +1,5 @@
 ﻿using ExamSupervisionSystem.Application.Interfaces.Repositories;
+using ExamSupervisionSystem.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

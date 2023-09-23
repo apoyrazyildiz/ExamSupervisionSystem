@@ -1,4 +1,5 @@
-﻿using ExamSupervisionSystem.Domain.Abstracts;
+﻿using ExamSupervisionSystem.Application.Interfaces.Repositories;
+using ExamSupervisionSystem.Domain.Abstracts;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -5,7 +5,7 @@ using ExamSupervisionSystem.Domain.Entities;
 
 namespace ExamSupervisionSystem.Application.Interfaces.Repositories
 {
-    internal class AdminRepository : IAdminRepository
+    public class AdminRepository : IAdminRepository
     {
         private readonly ApplicationDbContext _context;
 
@@ -54,36 +54,11 @@ namespace ExamSupervisionSystem.Application.Interfaces.Repositories
             return admin;
         }
 
-        public Task<List<Admin>> GetAllAdminsAsync()
+        public async Task<List<Admin>> GetAllAdminsAsync()
         {
             var admins = await _context.Admins.ToListAsync();
 
         return admins;
-        }
-
-        public Task AddAdminAsync(Admin admin)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task UpdateAdminAsync(Admin admin)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task DeleteAdminAsync(int adminId)
-        {
-            throw new NotImplementedException();
-        }
-
-        Task<Admin> IAdminRepository.GetAdminByIdAsync(int adminId)
-        {
-            throw new NotImplementedException();
-        }
-
-        Task<List<Admin>> IAdminRepository.GetAllAdminsAsync()
-        {
-            throw new NotImplementedException();
         }
 
         async Task<Admin> IAdminRepository.GetAdminByIdAsync(int adminId)
@@ -111,6 +86,11 @@ namespace ExamSupervisionSystem.Application.Interfaces.Repositories
 
           
             await _context.SaveChangesAsync();
+        }
+
+        public Task DeleteAdminAsync(int adminId)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using ExamSupervisionSystem.Application.Mappings;
+using ExamSupervisionSystem.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;

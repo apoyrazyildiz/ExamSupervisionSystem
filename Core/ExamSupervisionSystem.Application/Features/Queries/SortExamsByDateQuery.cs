@@ -36,7 +36,7 @@ namespace ExamSupervisionSystem.Application.Features.Queries
                     // ExamDto nesnesinin özelliklerini doldurun
                     Id = exam.Id
                     // Diğer özellikler burada doldurulur
-                });.ToList();
+                }).ToList();
 
                 return examDtos;
             }

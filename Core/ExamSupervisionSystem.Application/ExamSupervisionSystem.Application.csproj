@@ -7,10 +7,6 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Folder Include="Containers\" />
-    </ItemGroup>
-
-    <ItemGroup>
       <ProjectReference Include="..\ExamSupervisionSystem.Domain\ExamSupervisionSystem.Domain.csproj" />
     </ItemGroup>
 

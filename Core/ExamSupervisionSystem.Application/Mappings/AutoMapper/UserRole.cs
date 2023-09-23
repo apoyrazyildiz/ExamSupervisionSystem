@@ -1,6 +1,6 @@
 ﻿namespace ExamSupervisionSystem.Application.Mappings.AutoMapper
 {
-    internal class UserRole
+    public class UserRole
     {
         public int Id { get; set; } // Kullanıcının rol kimliği
 

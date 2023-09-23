@@ -51,29 +51,5 @@ namespace ExamSupervisionSystem.Application.Interfaces.Services
             _supervisorRepository.Save();
         }
 
-        public Task<SupervisorDto> GetSupervisorByIdAsync(int supervisorId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<IEnumerable<SupervisorDto>> GetAllSupervisorsAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<int> CreateSupervisorAsync(SupervisorDto supervisorDto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> UpdateSupervisorAsync(int supervisorId, SupervisorDto supervisorDto)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> DeleteSupervisorAsync(int supervisorId)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

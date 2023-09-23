@@ -1,4 +1,5 @@
 ﻿using ExamSupervisionSystem.Application.Dtos;
+using ExamSupervisionSystem.Domain.Entities;
 
 namespace ExamSupervisionSystem.Application.Interfaces.Repositories
 {
@@ -9,10 +10,10 @@ namespace ExamSupervisionSystem.Application.Interfaces.Repositories
         Task<int> CreateExamAsync(ExamDto examDto);
         Task<bool> UpdateExamAsync(int examId, ExamDto examDto);
         Task<bool> DeleteExamAsync(int examId);
-        Task<IEnumerable<object>> SortExamsByDateAscendingAsync();
-        Task<IEnumerable<object>> SortExamsByDateDescendingAsync();
-        Task<IEnumerable<object>> GetExamsBySupervisorAsync(int supervisorId);
+        Task<IEnumerable<Exam>> SortExamsByDateAscendingAsync();
+        Task<IEnumerable<Exam>> SortExamsByDateDescendingAsync();
+        Task<IEnumerable<Exam>> GetExamsBySupervisorAsync(int supervisorId);
         Task GetByIdAsync(int examId);
-        Task<IEnumerable<object>> SearchExamsAsync(string searchKeyword);
+        Task<IEnumerable<Exam>> SearchExamsAsync(string searchKeyword);
     }
 }
